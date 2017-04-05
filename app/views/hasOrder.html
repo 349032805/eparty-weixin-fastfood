@@ -25,6 +25,7 @@
   .goto-order {
     text-align: center;
     padding-top: 85px;
+    display: none;
   }
 
   .order-btn {
@@ -40,6 +41,64 @@
     margin-top: 60px;
   }
 
+  .order-list {
+    margin-top: 15px;
+
+  }
+
+  .order-box {
+    margin-bottom: 10px;
+    background: white;
+  }
+
+  .time-status {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+  }
+
+  .bottom-line {
+    height: 100%;
+    border-bottom: 1px solid #dedede;
+  }
+
+  .time-status p {
+    font-size: 12px;
+  }
+  
+ .order-content {
+  padding: 12px 10px;
+}
+ .left-pic {
+  float: left;
+  width:70px;
+  height: 70px;
+  overflow: hidden;
+}
+.store-logo {
+  width: 70px;
+  height: 70px;
+}
+ .order-item {
+  overflow: hidden;
+  zoom: 1;
+  margin-left: 85px;
+}
+ .storename2 {
+  font-size: 16px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+ .total-num {
+  font-size: 13px;
+  color: #999;
+  float: left;
+}
+ .total-price {
+  float: right;
+  font-size: 13px;
+}
+
 </style>
 
 <weuiheader title="已点订单"></weuiheader>
@@ -52,8 +111,63 @@
       </div>
     </div>
 
+    <!-- 没有订单,去点餐 -->
     <div class="goto-order">
       <p class="font13 col999">您目前没有已点的订单 ~</p>
       <button type="button" class="order-btn">立即点餐</button>
     </div>
+
+    <!-- 订单列表 -->
+    <div class="order-list">
+      <div class="order-box">
+        <div class="time-status">
+          <div class="bottom-line">
+            <p class="float-left col999">2017-01-01 12:11:13</p>
+            <p class="float-right" style="color:#ef6500;">订单待支付</p>
+          </div>
+        </div>
+
+        <div class="order-content clearfix">
+          <div class="left-pic">
+              <img src='/images/default_logo.png' class="store-logo">
+          </div>
+          <div class="order-item">
+            <div class="storename2">川香小菜(宝山店)<i class="icon-x icon-x17"></i></div>
+            <div style="margin-top:16px;font-size: 13px;">
+              <p class="total-num">3人共点了5份</p>
+              <p class="total-price">
+                <span class="col999">共计</span> <b class="col333">¥ 297</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-box">
+        <div class="time-status">
+          <div class="bottom-line">
+            <p class="float-left col999">2017-01-01 12:11:13</p>
+            <p class="float-right" style="color:#ef6500;">订单待支付</p>
+          </div>
+        </div>
+
+        <div class="order-content clearfix">
+          <div class="left-pic">
+              <img src='/images/default_logo.png' class="store-logo">
+          </div>
+          <div class="order-item">
+            <div class="storename2">川香小菜(宝山店)<i class="icon-x icon-x17"></i></div>
+            <div style="margin-top:16px;font-size: 13px;">
+              <p class="total-num">3人共点了5份</p>
+              <p class="total-price">
+                <span class="col999">共计</span> <b class="col333">¥ 297</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
 </div>
