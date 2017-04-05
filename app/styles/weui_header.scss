@@ -1,0 +1,96 @@
+@charset "utf-8";
+html{-webkit-tap-highlight-color: rgba(0,0,0,0)}
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?t73gvw');
+    src:    url('../fonts/icomoon.eot?t73gvw#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?t73gvw') format('truetype'),
+        url('../fonts/icomoon.woff?t73gvw') format('woff'),
+        url('../fonts/icomoon.svg?t73gvw#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-x:before {
+    font-size:18px;
+}
+.icon-x10{ 
+    color:#3c3c3c;
+        &:before {
+            content: "\e905";
+    }
+}
+.weui-header { 
+	position: fixed;
+	top: 0;
+	z-index:100;
+	width:100%;
+	padding: 3px 0;
+	height: 45px;
+	line-height: 45px;
+	-webkit-box-sizing: border-box;
+	color: #313131;
+	background: #fff; 
+		&:before {
+			content: " ";
+		    position: absolute;
+		    left: 0;
+		    bottom: 0;
+		    width: 100%;
+		    border-bottom: 1px solid #BCBAB6;
+		    color: #BCBAB6;
+		    -webkit-transform-origin:0 100%;
+		    transform-origin:0 100%;
+		    -webkit-transform: scaleY(0.5);
+		    transform: scaleY(0.5);
+		}
+
+		a {
+			color:#313131;
+		}
+
+		& .weui-header-title,h1 {
+			margin: 0 88px;
+			line-height: 40px;
+			text-align: center;
+			height: 40px;
+			font-size: 18px;
+			font-weight: 400;
+			width: auto;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		& .weui-header-left,.weui-header-right {
+			position: absolute;
+			top: 10px;
+			display: block;
+			font-size: 16px;
+			line-height: 21px;
+
+			a {
+				float: left; 
+				padding:3px 5px;
+			}
+		}
+
+		.weui-header-left {
+			left: 10px
+		}
+		.weui-header-right {
+			right: 10px
+		}
+}
