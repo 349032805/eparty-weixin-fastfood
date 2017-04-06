@@ -42,6 +42,11 @@ angular
             url: "/orderConfirm",
             templateUrl: "/views/orderConfirm.html"
         })
+
+        .state("myhome", {
+            url: "/myhome",
+            templateUrl: "/views/myhome.html"
+        })
        
         $urlRouterProvider.otherwise("/index");
   });
