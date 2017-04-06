@@ -15,11 +15,48 @@
 		margin-top: 10px;
 	}
 
+  .bottom-line {
+    height: 100%;
+    border-bottom: 1px solid #dedede;
+  }
+
 	.total-clean {
 		padding: 0 10px;
 		height: 40px;
 		line-height: 40px;
 		background: #fbfbfb;
+		font-size: 15px;
+	}
+
+	.dishes-item {
+		background: white;
+		padding: 0 10px;
+	}
+
+	.dishes-item ul {
+		height: 40px;
+		line-height: 40px;
+	}
+
+	.dishes-item ul li {
+		float: left;
+		display: block;
+	}
+
+	.discount-info {
+		height: 45px;
+		line-height: 45px;
+		padding: 0 10px;
+		background: white;
+		font-size: 15px;
+		border-bottom: 1px solid #dedede;
+	}
+
+	.discount-icon {
+		width: 16px;
+		height: 14px;
+		display: inline-block;
+		vertical-align: middle;
 	}
 </style>
 
@@ -27,17 +64,48 @@
 
 <div class="order-confirm">
 	<div class="tablecode">
-		<p class="float-left font15">桌号</p>
-		<p class="float-right font15">A20</p>
+		<p class="float-left">桌号</p>
+		<p class="float-right">A20</p>
 	</div>
 
 	<!-- 菜品列表 -->
 	<div class="dishes-content">
 		<div class="total-clean">
-			<p class="float-left font15">已点菜品 (11份)</p>
-			<p class="float-right font15">
-				<i class="icon-x icon-x9"></i>&nbsp;清空
-			</p>
+			<div class="bottom-line">
+				<p class="float-left">已点菜品 (11份)</p>
+				<p class="float-right">
+					<i class="icon-x icon-x9"></i>&nbsp;清空
+				</p>
+			</div>
+		</div>
+
+		<div class="dishes-item">
+			<div class="bottom-line">
+				<ul>
+					<li style="width:60%">鱼香肉丝</li>
+					<li class="text-center" style="width:20%">x1</li>
+					<li class="text-right" style="width:20%">¥58</li>
+				</ul>
+				<ul>
+					<li style="width:60%">鱼香肉丝</li>
+					<li class="text-center" style="width:20%">x1</li>
+					<li class="text-right" style="width:20%">¥58</li>
+				</ul>
+				<ul>
+					<li style="width:60%">餐具费</li>
+					<li class="text-center" style="width:20%">x4</li>
+					<li class="text-right" style="width:20%">¥58</li>
+				</ul>
+			</div>
+		</div>
+
+		 <!-- 优惠信息 -->
+		<div class="discount-info">
+			<p class="float-left">
+			 	<img src='/images/discount_icon.png' class="discount-icon">
+			 	&nbsp;<span class="col999">满100送10块</span>
+			 </p>
+			 <p class="float-right">- ¥10</p>
 		</div>
 	</div>
 	
