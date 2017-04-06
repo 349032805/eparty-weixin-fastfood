@@ -38,6 +38,10 @@ angular
             url: "/icons",
             templateUrl: "/views/icons.html"
         })
+        .state("orderConfirm", {
+            url: "/orderConfirm",
+            templateUrl: "/views/orderConfirm.html"
+        })
        
         $urlRouterProvider.otherwise("/index");
   });
