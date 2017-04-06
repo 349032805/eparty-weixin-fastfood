@@ -33,6 +33,11 @@ angular
             url: "/updateInfo",
             templateUrl: "/views/updateInfo.html"
         })
+
+        .state("icons", {
+            url: "/icons",
+            templateUrl: "/views/icons.html"
+        })
        
         $urlRouterProvider.otherwise("/index");
   });
