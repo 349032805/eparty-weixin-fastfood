@@ -1,4 +1,8 @@
   'use strict';
+  
+function postLink(scope, element, attrs) {
+  scope.title = attrs.title;
+}
 
 angular.module('eparty')
   .directive('weuiheader', function () {
@@ -7,9 +11,5 @@ angular.module('eparty')
   	templateUrl: '/views/header.html',
   	link:postLink
   };
-
-    function postLink(scope, element, attrs) {
-      scope.title = attrs.title;
-    }
 
 });
