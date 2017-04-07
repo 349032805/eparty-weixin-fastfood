@@ -48,6 +48,42 @@
   right: 25px;
 }
 
+.my-history {
+  height: 45px;
+  line-height: 45px;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  background: #fbfbfb;
+  display: flex;
+  position: relative;
+}
+
+.item-label {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.split-line {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  height: 20px;
+  border-right: 1px solid #dedede;
+}
+
+.current-line {
+  display: block;
+  width: 65px;
+  border-bottom: 1px solid #999;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+
+
 </style>
 
 <weuiheader title="我的主页"></weuiheader>
@@ -66,8 +102,18 @@
 		<div class="goto-update">
 			<span class="arrow"></span>
 		</div>
-		
 	</div>
 
-	
+  <div class="my-history">
+    <div class="item-label">
+        <span>我的订单</span>
+        <span class="current-line"></span>
+    </div>
+    <div class="item-label">
+       <span>服务记录</span>
+      <span class="current-line"></span>
+    </div>
+    <div class="split-line"></div>
+  </div>
+
 </div>
