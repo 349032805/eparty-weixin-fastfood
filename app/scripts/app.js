@@ -5,22 +5,12 @@ angular
     'ui.router'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.when("", "/index");
+    $urlRouterProvider.when("", "/main");
      $stateProvider
-        .state("index", {
-            url: "/index",
-            templateUrl: "/views/index.html",
-            controller: 'IndexCtrl'
-        })
-        .state("test", {
-            url: "/test",
-            templateUrl: "/views/test.html",
-            controller: 'TestCtrl'
-        })
-         .state("waiterRanking", {
-            url: "/waiterRanking",
-            templateUrl: "/views/waiterRanking.html",
-            controller: 'WaiterRankingCtrl'
+        .state("main", {
+            url: "/main",
+            templateUrl: "/views/main.html",
+            controller: "MainCtrl"
         })
         .state("hasOrder", {
             url: "/hasOrder",
@@ -31,20 +21,22 @@ angular
             url: "/updateInfo",
             templateUrl: "/views/updateInfo.html"
         })
-
         .state("icons", {
             url: "/icons",
             templateUrl: "/views/icons.html"
+        })
+        .state("template", {
+            url: "/template",
+            templateUrl: "/views/template.html"
         })
         .state("orderConfirm", {
             url: "/orderConfirm",
             templateUrl: "/views/orderConfirm.html"
         })
-
         .state("myhome", {
             url: "/myhome",
             templateUrl: "/views/myhome.html"
         })
        
-        $urlRouterProvider.otherwise("/index");
+        $urlRouterProvider.otherwise("/main");
   });

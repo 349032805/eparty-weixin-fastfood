@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*1px的显示问题*/
+.top-1px-line:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  color: #e8e8e8;
+  -webkit-transform-origin:0 100%;
+  transform-origin:0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.bottom-1px-line:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  color: #e8e8e8;
+  -webkit-transform-origin:0 100%;
+  transform-origin:0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
