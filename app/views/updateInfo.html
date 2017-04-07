@@ -1,10 +1,108 @@
 <style type="text/css">
-	
+	.update-info {
+		padding-top: 55px;
+	}
+
+	.person-info {
+		background: white;
+	}
+
+	.row {
+		height: 47px;
+		line-height: 47px;
+		padding-left: 10px;
+		padding-right: 30px;
+		background: white;
+		position: relative;
+		vertical-align: middle;
+	}
+
+	.weixin-header {
+		line-height: 47px;
+		float: right;
+	}
+
+	.weixin-header img{
+		height: 40px;
+		width: 40px;
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	.arrow {
+	  content: '';
+	  position: absolute;
+	  width: 8px;
+	  height: 8px;
+	  border: 1px solid #999;
+	  -webkit-transform: rotate(-135deg);
+	  -moz-transform: rotate(-135deg);
+	  -o-transform: rotate(-135deg);
+	  -ms-transform: rotate(-135deg);
+	  transform: rotate(-135deg);
+	  border-top: none;
+	  border-right: none;
+	  top: 21px;
+	  right: 10px;
+	}
+
+	.sex {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		vertical-align: text-bottom;
+	}
+
+	.man {
+		background: url("/images/checkbox-default.png") no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.woman {
+		background: url("/images/checkbox-tick.png") no-repeat;
+		background-size: 100% 100%;
+	}
+
+.bottom-line {
+    border-bottom: 1px solid #dedede;
+  }
+
 </style>
 
- <div class="weui-header"> 
-	<div class="weui-header-left">
-		<a href="javascript:history.back(-1)"><i class="icon-x icon-x10"></i></a>
+<weuiheader title="修改资料"></weuiheader>
+
+<div class="update-info">
+	<div class="person-info">
+
+		<div class="row bottom-line">
+			<p class="float-left">头像</p>
+			<div class="weixin-header">
+				<img src="/images/default_head.png">
+			</div>
+			<div class="arrow"></div>
+		</div>
+
+		<div class="row bottom-line">
+			<p class="float-left">昵称</p>
+			<p class="float-right">fan</p>
+			<div class="arrow"></div>
+		</div>
+
+		<div class="row">
+			<p class="float-left">性别</p>
+			<div class="float-right">
+				<span><i class="sex man"></i> &nbsp;男</span>
+				<span style="margin-left: 10px;">
+					<i class="sex woman"></i> &nbsp;女
+				</span>
+			</div>
+		</div>
 	</div>
-	<h1 class="weui-header-title">已点订单</h1>
+
+	<div class="row" style="margin-top:10px;">
+		<p class="float-left">手机号</p>
+		<p class="float-right">18702121893</p>
+		<div class="arrow"></div>
+	</div>
+
 </div>
