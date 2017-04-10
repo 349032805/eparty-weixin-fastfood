@@ -79,6 +79,57 @@
 		vertical-align: middle;
 	}
 
+	.row {
+		height: 34px;
+		line-height: 34px;
+		border:1px solid red;
+	}
+
+	.line-left {
+	  display:inline-block;
+	  width:37px;
+	  height:3px;
+	  vertical-align:middle;
+	  background:url("/images/line-left.png") no-repeat;
+	  background-size: 100% 100%;
+	}
+
+	.line-right {
+	  display:inline-block;
+	  width:37px;
+	  height:3px;
+	  vertical-align:middle;
+	  background:url("/images/line-right.png") no-repeat;
+	  background-size: 100% 100%;
+	}
+
+	.dealcode-title {
+		display: inline-block;
+		margin: 0 10px;
+		color: #ffb196;
+	}
+
+	.dealcode-theme {
+		width: 220px;
+		height: 94px;
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 5px;
+	}
+
+	.dealcode {
+		font-size: 26px;
+		color:#ff571d;
+		margin-top: 10px;
+	}
+
+	.deal-tip{
+		color:#999;
+		margin-top: 15px;
+	}
+
+
+
 
 </style>
 
@@ -103,10 +154,31 @@
 		<div class="bill-pin"></div>
 		<div class="bill-detail">
 			<div class="content">
-				<img src="/images/default_head.png" class="head"> &nbsp; <span style="vertical-align: middle;">范骏</span>
+				<div class="row">
+					<div class="float-left">
+						<img src="/images/default_head.png" class="head"> &nbsp;<span style="vertical-align: middle;">范骏</span>
+					</div>
+					<p class="float-right">2号桌</p>
+				</div>
+
+				<!-- 就餐号 -->
+				<div class="dealcode-theme">
+					<div>
+						<i class="line-left"></i>
+						<p class="dealcode-title">就餐号</p>
+						<i class="line-right"></i>
+					</div>
+					<p class="dealcode">029</p>
+					<p class="deal-tip">请记住就餐号,请凭就餐号取餐</p>
+
+				</div>
+
+
 			</div>
 		</div>
 	</div>
+
+
 
 	<!-- 评价订单按钮 -->
 	<div>
