@@ -1,0 +1,110 @@
+<style type="text/css">
+	.weui-header {
+		background: #0aa59f;
+		color: white;
+	}
+
+	.weui-header:before {
+		border-bottom: none;
+	}
+
+	.icon-x10:before {
+		color: white;
+	}
+
+	.order-detail {
+		padding-top: 45px;
+	}
+
+	.order-status {
+		padding: 10px;
+		background: #0aa59f;
+	}
+
+	.status-ban {
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		background: white;
+		padding-left: 15px;
+		position: relative;
+	}
+
+	.order {
+		width: 42px;
+		height: 42px;
+		vertical-align: middle;
+	}
+
+	.pay-finish {
+		width: 17px;
+		height: 17px;
+		position: absolute;
+		top: 33px;
+		left: 45px;
+		z-index: 10;
+	}
+
+	.order-bill {
+		padding: 20px 5px 10px;
+		position: relative;
+	}
+
+	.bill-pin {
+		width: 100%;
+		height: 5px;
+		background: #cfcfcf;
+		border-radius: 4px;
+		/*position: absolute;
+		top: 15px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;*/
+	}
+
+	.bill-detail {
+		width: 100%;
+		height: auto;
+		background: white;
+		z-index: 100;
+		position: absolute;
+		top: 10px;
+		left: 0;
+	}
+
+
+</style>
+
+<div class="weui-header"> 
+    <div class="weui-header-left">
+      <a href="javascript:history.back(-1)"><i class="icon-x icon-x10"></i></a>
+    </div>
+    <h1 class="weui-header-title">订单详情</h1>
+</div>
+
+<div class="order-detail">
+	<div class="order-status">
+		<div class="status-ban">
+			<div class="float-left">
+				 <img src="/images/order.png" class="order">
+				 <img src="/images/pay_finish.png" class="pay-finish">
+			 </div>
+			 <p class="float-left" style="margin-left: 20px;">订单已支付</p>
+		</div>
+	</div>
+
+	<!-- 订单详细 -->
+	<div class="order-bill">
+		<div class="bill-pin"></div>
+		<div class="bill-detail">
+			aaaa
+		</div>
+	</div>
+
+	<!-- 评价订单按钮 -->
+	<div>
+		
+	</div>
+
+
+</div>
