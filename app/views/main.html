@@ -17,19 +17,159 @@
 }
 
 .person {
+  width: 19px;
+  height: 21px;
+}
 
+.main {
+  padding-top: 45px;
+}
+
+.tab{
+  height: 45px;
+  line-height: 45px;
+  background: white;
+  display: flex;
+  position: relative;
+}
+
+.tab-title {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  color: #777;
+}
+
+.current-line {
+  display: block;
+  width: 80px;
+  border-bottom: 1px solid #11bbb4;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.bottom-1px-line:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #BCBAB6;
+  color: #BCBAB6;
+  -webkit-transform-origin:0 100%;
+  transform-origin:0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.current-tab {
+  color:#00a9a2;
+}
+
+.store-detail {
+  margin-top: 15px;
+}
+
+.store-logo {
+  background: white;
+  padding: 0 15px;
+  height: 92px;
+  line-height: 92px;
+}
+
+.store-logo img {
+  height: 60px;
+  width: 60px;
+  vertical-align: middle;
+}
+
+.row {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  background: white;
+  position: relative;
+}
+
+.address-phone {
+  margin-top: 15px;
+}
+
+.split-line:after {
+  content: " ";
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #BCBAB6;
+  color: #BCBAB6;
+  -webkit-transform-origin:0 100%;
+  transform-origin:0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
 }
 
 </style>
 
 <!-- 开场动画 -->
 <div class="load-flash" ng-hide="hasShowed">
-      <img src="./images/load.gif" class="load-img">
+      <img src="/images/load.gif" class="load-img">
 </div>
 
 <div class="weui-header"> 
     <div class="weui-header-left">
       <img src="/images/person.png" class="person">
     </div>
-    <h1 class="weui-header-title"></h1>
+
+    <div class="weui-header-right">
+      <i class="icon-x icon-x6"></i>&nbsp;已点订单
+    </div>
 </div>
+
+<div class="main">
+
+  <!-- tab切换 -->
+  <div class="tab bottom-1px-line">
+    <div class="tab-title">
+        <span class="current-tab">菜单列表</span>
+        <span class="current-line"></span>
+    </div>
+    <div class="tab-title">
+       <span>餐厅详情</span>
+      <span class="current-line"></span>
+    </div>
+    <div class="split-line"></div>
+  </div>
+
+  <!-- 菜单列表 -->
+  <div></div>
+
+
+  <!-- 餐厅详情 -->
+  <div class="store-detail">
+    <div class="store-logo">
+      <img src="/images/default_logo.png"> &nbsp;&nbsp;易趴科技
+    </div>
+
+    <div class="address-phone">
+      <div class="row split-line">
+        <i class="icon-x icon-x14"></i>&nbsp;杨高南路428号
+      </div>
+
+      <div class="row">
+        <i class="icon-x icon-x15"></i>&nbsp;18702121893
+      </div>
+    </div>
+
+    <div class="businesstime-intro">
+      
+    </div>
+
+  </div>
+
+
+</div>
+
