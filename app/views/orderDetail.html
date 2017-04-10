@@ -69,6 +69,16 @@
 		margin: 0 auto;
 	}
 
+	.content {
+		padding: 13px;
+	}
+
+	.head {
+		height: 28px;
+		width: 28px;
+		vertical-align: middle;
+	}
+
 
 </style>
 
@@ -82,11 +92,9 @@
 <div class="order-detail">
 	<div class="order-status">
 		<div class="status-ban">
-			<div class="float-left">
-				 <img src="/images/order.png" class="order">
-				 <img src="/images/pay_finish.png" class="pay-finish">
-			 </div>
-			 <p class="float-left" style="margin-left: 20px;">订单已支付</p>
+			 <img src="/images/order.png" class="order">
+			 <img src="/images/pay_finish.png" class="pay-finish">
+			 <span style="vertical-align: middle; margin-left: 10px;">订单已支付</span>
 		</div>
 	</div>
 
@@ -94,7 +102,9 @@
 	<div class="order-bill">
 		<div class="bill-pin"></div>
 		<div class="bill-detail">
-			aaaa
+			<div class="content">
+				<img src="/images/default_head.png" class="head"> &nbsp; <span style="vertical-align: middle;">范骏</span>
+			</div>
 		</div>
 	</div>
 
