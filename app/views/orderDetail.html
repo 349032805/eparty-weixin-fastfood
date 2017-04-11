@@ -14,6 +14,7 @@
 
 	.order-detail {
 		padding-top: 45px;
+		padding-bottom: 60px;
 	}
 
 	.order-status {
@@ -57,7 +58,7 @@
 		border-radius: 4px;
 	}
 
-	.bill-detail {
+	/*.bill-detail {
 		width: 96%;
 		height: auto;
 		background: white;
@@ -67,7 +68,18 @@
 		left: 0;
 		right: 0;
 		margin: 0 auto;
+	}*/
+
+
+	.bill-detail {
+		margin-top: -3px;
+		margin-left: 5px;
+		margin-right: 5px;
+		background: white;
+		z-index: 100;
 	}
+
+
 
 	.content {
 		padding: 13px;
@@ -173,6 +185,84 @@
 		height: 18px;
 	}
 
+	.dish-title {
+		height: 45px;
+		line-height: 45px;
+		padding-left: 10px;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.dish-item {
+		display: flex;
+		padding: 0 10px;
+		height: 50px;
+		line-height: 50px;
+	}
+
+	.dish-item li {
+		border-bottom: 1px dashed #cbcbcb;
+	}
+
+	.discount-icon {
+		width: 16px;
+		height: 14px;
+		vertical-align: middle;
+	}
+
+	.order-info-title {
+		height: 47px;
+		line-height: 47px;
+		background: white;
+		padding-left: 10px;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.order-info {
+		background: white;
+	}
+
+	.info-row {
+		height: 47px;
+		line-height: 47px;
+		background: white;
+		font-size: 14px;
+		color: #666;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.opt {
+		height: 50px;
+		width: 100%;
+		background: white;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		z-index: 100;
+		padding: 5px 10px;
+	}
+
+	.opt button {
+		height: 100%;
+		width: 100%;
+		background: #11bbb4;
+		font-size: 18px;
+		color: white;
+		border-radius: 4px;
+	}
+
+	.opt:before{
+	  content: " ";
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  border-bottom: 1px solid #BCBAB6;
+	  color: #BCBAB6;
+	  -webkit-transform-origin:0 100%;
+	  transform-origin:0 100%;
+	  -webkit-transform: scaleY(0.5);
+	  transform: scaleY(0.5);
+	}
 
 </style>
 
@@ -227,17 +317,72 @@
 				 <img src="/images/split_circle.png" class="split-circle-img">
 			</div>
 
-			
+			<div class="dish-title"><strong>订单菜品</strong></div>
+
+			<!-- 菜品列表 -->
+
+			<ul class="dish-item">
+				<li style="flex: 5">上汤娃娃菜</li>
+				<li class="text-center" style="flex: 2">x1</li>
+				<li class="text-right" style="flex: 3">¥58</li>
+			</ul>
+
+			<ul class="dish-item">
+				<li style="flex: 5">上汤娃娃菜</li>
+				<li class="text-center" style="flex: 2">x1</li>
+				<li class="text-right" style="flex: 3">¥58</li>
+			</ul>
+
+			<ul class="dish-item">
+				<li style="flex: 7">#附加餐具费</li>
+				<li class="text-right" style="flex: 3">¥158</li>
+			</ul>
+
+			<ul class="dish-item">
+				<li style="flex: 7">
+					<img src="/images/discount_icon.png" class="discount-icon">
+					&nbsp;<span style="vertical-align: middle;">满100送10块</span>
+				</li>
+				<li class="text-right" style="flex: 3">-¥15</li>
+			</ul>
+
+			<ul class="dish-item">
+				<li style="flex: 7;border:none;">合计 ¥125 <span class="font13 col999" style="margin-left:5px;">已优惠 ¥12</span></li>
+				<li class="text-right" style="flex: 3;border:none;">实付 <span style="font-size: 22px;color:#f97432">¥125</span></li>
+			</ul>
 
 		</div>
 	</div>
 
+	<!-- 订单信息 -->
+	<div class="order-info">
+		<div class="order-info-title"><strong>订单信息</strong></div>
+		<div style="padding:0 10px;">
+			<div class="info-row">
+				<p class="float-left">订单编号:</p>
+				<p class="float-right">123456</p>
+			</div>
+		</div>
 
+		<div style="padding:0 10px;">
+			<div class="info-row">
+				<p class="float-left">下单时间:</p>
+				<p class="float-right">2017-01-01 12:11:13</p>
+			</div>
+		</div>
 
-	<!-- 评价订单按钮 -->
-	<div>
-		
+		<div style="padding:0 10px;">
+			<div class="info-row">
+				<p class="float-left">支付方式:</p>
+				<p class="float-right">未支付</p>
+			</div>
+		</div>
+
 	</div>
 
+	<!-- 评价订单按钮 -->
+	<div class="opt">
+		<button type="button">菜品评价</button>
+	</div>
 
 </div>
