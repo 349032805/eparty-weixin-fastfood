@@ -3,11 +3,8 @@
 		padding: 60px 10px;
 	}
 
-	.all-dishes {
-		margin-top: 10px;
-	}
-
 	.dish-box {
+		margin-top: 10px;
 	}
 
 	.dish-box li {
@@ -16,6 +13,7 @@
 		margin-bottom: 10px;
 		box-shadow: 1px 1px 9px rgba(0,0,0,.2);
 		border-radius: 4px;
+		position: relative;
 	}
 
 	.dish-box img {
@@ -32,14 +30,95 @@
 		font-size: 14px;
 	}
 
+	.opt {
+		height: 50px;
+		width: 100%;
+		background: white;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		z-index: 100;
+		padding: 5px 10px;
+	}
+
+	.opt button {
+		height: 100%;
+		width: 100%;
+		background: #11bbb4;
+		font-size: 18px;
+		color: white;
+		border-radius: 4px;
+		letter-spacing: 20px;
+	}
+
+	.opt:before{
+	  content: " ";
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 100%;
+	  border-bottom: 1px solid #BCBAB6;
+	  color: #BCBAB6;
+	  -webkit-transform-origin:0 100%;
+	  transform-origin:0 100%;
+	  -webkit-transform: scaleY(0.5);
+	  transform: scaleY(0.5);
+	}
+
+	.bg-layer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.5);
+		z-index: 10;
+	}
+
+	.bg-layer img {
+		width: 44px;
+		height: 44px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		z-index: 20;
+	}
+
+
+
 </style>
 
 <weuiheader title="评价订单"></weuiheader>
 
 <div class="evaluate">
 	<p class="col999">选出您最喜欢的菜品:</p>
-	<div class="all-dishes">
 		<ul class="dish-box">
+			<li class="float-left">
+				<img src="/images/dish.png">
+				<div class="dish-info">
+					<p class="float-left">鱼香肉丝</p>
+					<p class="float-right" style="color:#fd661c">¥ 29</p>
+				</div>
+			</li>
+
+			<li class="float-right">
+				<img src="/images/dish.png">
+				<div class="dish-info">
+					<p class="float-left">鱼香肉丝</p>
+					<p class="float-right" style="color:#fd661c">¥ 29</p>
+				</div>
+
+				<!-- 透明图层 -->
+				<div class="bg-layer">
+					<div style="position: relative;height: 100%;">
+						<img src="/images/enjoy_tick.png">
+					</div>
+				</div>
+			</li>
+
 			<li class="float-left">
 				<img src="/images/dish.png">
 				<div class="dish-info">
@@ -72,5 +151,9 @@
 				</div>
 			</li>
 		</ul>
+
+	<div class="opt">
+		<button type="button">提交</button>
 	</div>
+
 </div>
