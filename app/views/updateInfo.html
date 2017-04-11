@@ -34,7 +34,7 @@
 	  position: absolute;
 	  width: 8px;
 	  height: 8px;
-	  border: 1px solid #999;
+	  border: 1px solid #3c3c3c;
 	  -webkit-transform: rotate(-135deg);
 	  -moz-transform: rotate(-135deg);
 	  -o-transform: rotate(-135deg);
@@ -63,9 +63,90 @@
 		background-size: 100% 100%;
 	}
 
-.bottom-line {
-    border-bottom: 1px solid #dedede;
-  }
+	.bottom-line {
+	    border-bottom: 1px solid #dedede;
+	 }
+
+	 .camera {
+ 	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 10;
+	    opacity: 0;
+	    width: 100%;
+	    height: 100%;
+	 }
+
+	 .mask {
+	    height: 100%;
+	    width: 100%;
+	    background-color: rgba(0,0,0,.6);
+	    position: fixed;
+	    z-index: 1000;
+	    top: 0;
+	    left: 0;
+	    /*display: none;*/
+	 }
+
+	 .update-nickname-dialog {
+    	width: 260px;
+	    height: 180px;
+	    background: white;
+	    position: fixed;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -130px;
+	    margin-top: -90px;
+	    border-radius: 2px;
+	    z-index: 3000;
+	    display: none;
+	 }
+
+.dialog .dialog-content {
+  padding: 15px;
+}
+.dialog .dialog-input {
+  border: 1px solid #dedede;
+  width: 100%;
+  height: 34px;
+  padding-left: 12px;
+  outline: none;
+  display: block;
+}
+
+.dialog .input-tip {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+}
+.dialog .opt-btn {
+  width: 100px;
+  height: 34px;
+  font-size: 14px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  outline: none;
+}
+.dialog .error-tip {
+  font-size: 12px;
+  color: red;
+  margin-top: 10px;
+  height: 30px;
+}
+
+ .update-phone-dialog {
+	width: 260px;
+    height: 140px;
+    background: white;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -130px;
+    margin-top: -70px;
+    border-radius: 2px;
+    z-index: 3000;
+ }
 
 </style>
 
@@ -80,6 +161,7 @@
 				<img src="/images/default_head.png">
 			</div>
 			<div class="arrow"></div>
+			 <input type="file" accept="image/*" capture="camera" name="image" class="camera" id="updateHead"/>
 		</div>
 
 		<div class="row bottom-line">
@@ -103,6 +185,34 @@
 		<p class="float-left">手机号</p>
 		<p class="float-right">18702121893</p>
 		<div class="arrow"></div>
+	</div>
+
+	<!-- 遮罩层 -->
+	<div class="mask"></div>
+
+	<!-- 修改昵称模态框 -->
+	<div class="update-nickname-dialog dialog">
+		<div class="dialog-content">
+			<input type="text" class="dialog-input" placeholder="请输入昵称" maxlength="30" id="nickname">
+			<p class="input-tip">4-30个字符，支持中英文和数字。</p>
+			<p class="error-tip"></p>
+			<div class="opt-block">
+				<button type="button" class="opt-btn float-left cancel-btn" style="background-color: #dedede">取消</button>
+				<button type="button" class="opt-btn float-right" style="background-color: #11bbb4;">确定</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 填写手机号模态框 -->
+	<div class="update-phone-dialog dialog">
+		<div class="dialog-content">
+			<input type="text" class="dialog-input" placeholder="请输入手机号" maxlength="11">
+			<p class="error-tip">1111</p>
+			<div class="opt-block">
+				<button type="button" class="opt-btn float-left cancel-btn" style="background-color: #dedede">取消</button>
+				<button type="button" class="opt-btn float-right" style="background-color: #11bbb4;">确定</button>
+			</div>
+		</div>
 	</div>
 
 </div>
