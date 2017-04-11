@@ -25,16 +25,20 @@
   padding-top: 90px;
 }
 
+.discount-info-and-tab {
+  width: 100%;
+  position: fixed;
+  top: 45px;
+  left: 0;
+  z-index: 100;
+}
+
 .tab {
   width: 100%;
   height: 45px;
   line-height: 45px;
   background: white;
   display: flex;
-  position: fixed;
-  top: 45px;
-  left: 0;
-  z-index: 100;
 }
 
 .tab-title {
@@ -47,7 +51,7 @@
 .current-line {
   display: block;
   width: 80px;
-  border-bottom: 1px solid #11bbb4;
+  border-bottom: 2px solid #11bbb4;
   position: absolute;
   left: 0;
   right: 0;
@@ -75,6 +79,7 @@
 
 .store-detail {
   margin-top: 15px;
+  display: none;
 }
 
 .store-logo {
@@ -127,12 +132,65 @@
   text-align: justify;
 }
 
+.discount-message {
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  background: #c4e8e7;
+  padding:0 12px;
+  font-size: 13px;
+  color: #307f7c;
+  display: none;
+}
+
+.discount-message img{
+  width: 13px;
+  height: 12px;
+  vertical-align: middle;
+}
+
+/*菜单样式!!!*/
+
+.menu-category {
+  width: 25%;
+  background: #f7fbfb;
+  overflow-y: auto;
+  float: left;
+}
+
+.menu-category li {
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  border-bottom: 1px dashed #e3dfd8;
+  font-size: 14px;
+}
+
+.menu-dishes {
+  width: 75%;
+  float: left;
+  overflow-y: auto;
+}
+
+.category-title {
+  height: 26px;
+  line-height: 26px;
+  background: #f8fbfb;
+  font-size: 13px;
+  padding-left: 10px;
+}
+
+
+
+
+/*菜单样式!!!*/
+
 </style>
 
 <!-- 开场动画 -->
-<div class="load-flash" ng-hide="hasShowed">
+<!-- <div class="load-flash" ng-hide="hasShowed">
       <img src="/images/load.gif" class="load-img">
-</div>
+</div> -->
 
 <div class="weui-header"> 
     <div class="weui-header-left">
@@ -140,29 +198,56 @@
     </div>
 
     <div class="weui-header-right">
-      <i class="icon-x icon-x6"></i>&nbsp;已点订单
+      <i class="icon-x icon-x6"></i>&nbsp;<span style="vertical-align: text-top;">已点订单</span>
     </div>
 </div>
 
-  <!-- tab切换 -->
+<!-- 优惠活动消息和tab切换 -->
+<div class="discount-info-and-tab">
+  <div class="discount-message">
+    <img src="/images/broadcast.png">
+    &nbsp;<span style="vertical-align: middle;">商家优惠活动 满100满10块</span>
+  </div>
+
   <div class="tab bottom-1px-line">
     <div class="tab-title">
-        <span class="current-tab">菜单列表</span>
+        <span class="current-tab"><strong>菜单列表</strong></span>
         <span class="current-line"></span>
     </div>
     <div class="tab-title">
-       <span>餐厅详情</span>
+       <span><strong>餐厅详情</strong></span>
       <span class="current-line"></span>
     </div>
   </div>
+</div>
 
 <div class="main">
 
   <!-- 菜单列表!!! -->
-  <div>
-    
-  </div>
+  <div class="menu">
+    <!-- 左侧分类 -->
+    <div class="menu-category">
+      <ul>
+        <li>经典私房菜</li>
+        <li>农家风味</li>
+        <li>开胃凉菜</li>
+        <li>饮品</li>
+        <li>生煎</li>
+        <li>汤</li>
+        <li>主食</li>
+        <li>招牌菜</li>
 
+      </ul>
+    </div>
+
+    <!-- 右侧菜单 -->
+    <div class="menu-dishes">
+      <ul class="">
+        <li class="category-title">经典私房菜</li>
+      </ul>
+    </div>
+
+  </div>
 
   <!-- 餐厅详情 -->
   <div class="store-detail">
