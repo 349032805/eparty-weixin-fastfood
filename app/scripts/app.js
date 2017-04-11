@@ -41,6 +41,10 @@ angular
             url: "/orderDetail",
             templateUrl: "/views/orderDetail.html"
         })
+        .state("evaluate", {
+            url: "/evaluate",
+            templateUrl: "/views/evaluate.html"
+        });
        
         $urlRouterProvider.otherwise("/main");
   });
