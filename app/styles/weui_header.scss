@@ -45,6 +45,12 @@ html{-webkit-tap-highlight-color: rgba(0,0,0,0)}
     color:#a9a9a9;
 }
 
+.icon-x4:before {
+    content: "\e90a";
+    font-size:22px;
+    color:#e5e3e0;
+}
+
 .icon-x6:before {
     content: "\e90c";
 }

@@ -103,7 +103,7 @@ body{
     margin-top: 10px;
 }
 
- .global-mask {
+ .global-mask-200 {
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,.6);
@@ -111,6 +111,18 @@ body{
     z-index: 200;
     top: 0;
     left: 0;
+    display: none;
+ }
+
+  .global-mask-400 {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    position: fixed;
+    z-index: 400;
+    top: 0;
+    left: 0;
+    display: none;
  }
 
 .tip-bubble {

@@ -313,6 +313,40 @@
     font-size: 16px;
   }
 
+  .opt-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .shop-cart {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 310;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background: #11bbb4;
+    text-align: center;
+  }
+
+  .total-count {
+    position: absolute;
+    bottom: 44px;
+    left: 46px;
+    z-index: 320;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background: #ef592b;
+    color: white;
+    font-size: 12px;
+  }
+
 /*菜单样式!!!*/
 
 </style>
@@ -602,10 +636,15 @@
 
   <!-- 底部重选以及下一步 -->
   <div class="opt">
-
-    <div class="cart-price">购物车空空如也</div>
-    <div class="next-step">
-      <button type="button">下一步</button>
+    <div class="opt-box">
+      <div class="shop-cart">
+        <i class="icon-x icon-x4"></i>
+      </div>
+      <div class="total-count">10</div>
+      <div class="cart-price">购物车空空如也</div>
+      <div class="next-step">
+        <button type="button">下一步</button>
+      </div>
     </div>
   </div>
 
