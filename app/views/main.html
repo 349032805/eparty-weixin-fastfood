@@ -166,10 +166,12 @@
   font-size: 14px;
 }
 
+
 .menu-dishes {
   width: 75%;
   float: left;
   overflow-y: auto;
+  background: white;
 }
 
 .category-title {
@@ -180,8 +182,65 @@
   padding-left: 10px;
 }
 
+.dish-tip {
+  height: 26px;
+  line-height: 26px;
+  background: #f8fbfb;
+  font-size: 12px;
+  padding-left: 10px;
+  color: #666;
+}
 
+.dish-item {
+  padding-left: 10px;
+}
 
+.dish-box {
+  padding: 10px;
+  background: white;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.dish-box img {
+  height: 50px;
+  width: 50px;
+  float: left;
+}
+
+.name-price {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.add-minus {
+  width: 86px;
+  height: 32px;
+  line-height: 32px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+  display: flex;
+}
+
+.block {
+  flex: 1;
+  text-align: center;
+}
+
+.select-attr-btn {
+  width: 70px;
+  height: 25px;
+  font-size: 14px;
+  color: white;
+  background: #11bbb4;
+  border-radius: 12px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+}
 
 /*菜单样式!!!*/
 
@@ -236,15 +295,227 @@
         <li>汤</li>
         <li>主食</li>
         <li>招牌菜</li>
+         <li>经典私房菜</li>
+        <li>农家风味</li>
+        <li>开胃凉菜</li>
+        <li>饮品</li>
+        <li>生煎</li>
+        <li>汤</li>
+        <li>主食</li>
+        <li>招牌菜</li>
+
 
       </ul>
     </div>
 
     <!-- 右侧菜单 -->
     <div class="menu-dishes">
-      <ul class="">
+      <ul>
         <li class="category-title">经典私房菜</li>
+        <li class="dish-item">
+          <div class="dish-box">
+            <img src="/images/dish_demo.jpg">
+            <div class="name-price">
+              <p class="font16">酸汤双笋牛蛙</p>
+              <p class="font12 col999">月售0份</p>
+              <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
+            </div>
+
+             <div class="add-minus">
+                <span class="block">
+                  <i class="icon-x icon-x2"></i>
+                </span>
+                &nbsp;
+                <span class="font14 block">1</span>
+                &nbsp;
+                <span class="block">
+                  <i class="icon-x icon-x1"></i>
+                </span>
+              </div>
+
+          </div>
+        </li>
+
+        <li class="dish-item">
+          <div class="dish-box">
+            <img src="/images/dish.png">
+            <div class="name-price">
+              <p class="font16">酸汤双笋牛蛙</p>
+              <p class="font12 col999">月售0份</p>
+              <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
+
+              <button type="button" class="select-attr-btn">选规格</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="dish-item">
+          <div class="dish-box">
+            <img src="/images/nodish.png">
+            <div class="name-price">
+              <p class="font16">酸汤双笋牛蛙</p>
+              <p class="font12 col999">月售0份</p>
+              <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
+
+              <div class="add-minus">
+                <span class="block">
+                  <i class="icon-x icon-x2"></i>
+                </span>
+                &nbsp;
+                <span class="font14 block">1</span>
+                &nbsp;
+                <span class="block">
+                  <i class="icon-x icon-x1"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="category-title">农家风味</li>
+        <li class="dish-item">
+          <div class="dish-box">
+            <img src="/images/dish_demo.jpg">
+            <div class="name-price">
+              <p class="font16">酸汤双笋牛蛙</p>
+              <p class="font12 col999">月售0份</p>
+              <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
+            </div>
+
+             <div class="add-minus">
+                <span class="block">
+                  <i class="icon-x icon-x2"></i>
+                </span>
+                &nbsp;
+                <span class="font14 block">1</span>
+                &nbsp;
+                <span class="block">
+                  <i class="icon-x icon-x1"></i>
+                </span>
+              </div>
+
+          </div>
+        </li>
+
+        <li class="dish-item">
+          <div class="dish-box">
+            <img src="/images/nodish.png">
+            <div class="name-price">
+              <p class="font16">酸汤双笋牛蛙</p>
+              <p class="font12 col999">月售0份</p>
+              <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
+
+              <div class="add-minus">
+                <span class="block">
+                  <i class="icon-x icon-x2"></i>
+                </span>
+                &nbsp;
+                <span class="font14 block">1</span>
+                &nbsp;
+                <span class="block">
+                  <i class="icon-x icon-x1"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="dish-item">
+          <div class="dish-box">
+            <img src="/images/dish.png">
+            <div class="name-price">
+              <p class="font16">酸汤双笋牛蛙</p>
+              <p class="font12 col999">月售0份</p>
+              <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
+
+              <div class="add-minus">
+                <span class="block">
+                  <i class="icon-x icon-x2"></i>
+                </span>
+                &nbsp;
+                <span class="font14 block">1</span>
+                &nbsp;
+                <span class="block">
+                  <i class="icon-x icon-x1"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+         <li class="category-title">开胃凉菜</li>
+        <li class="dish-item">
+          <div class="dish-box">
+            <img src="/images/dish_demo.jpg">
+            <div class="name-price">
+              <p class="font16">酸汤双笋牛蛙</p>
+              <p class="font12 col999">月售0份</p>
+              <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
+            </div>
+
+             <div class="add-minus">
+                <span class="block">
+                  <i class="icon-x icon-x2"></i>
+                </span>
+                &nbsp;
+                <span class="font14 block">1</span>
+                &nbsp;
+                <span class="block">
+                  <i class="icon-x icon-x1"></i>
+                </span>
+              </div>
+
+          </div>
+        </li>
+
+        <li class="dish-item">
+          <div class="dish-box">
+            <img src="/images/dish.png">
+            <div class="name-price">
+              <p class="font16">酸汤双笋牛蛙</p>
+              <p class="font12 col999">月售0份</p>
+              <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
+
+              <div class="add-minus">
+                <span class="block">
+                  <i class="icon-x icon-x2"></i>
+                </span>
+                &nbsp;
+                <span class="font14 block">1</span>
+                &nbsp;
+                <span class="block">
+                  <i class="icon-x icon-x1"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="dish-item">
+          <div class="dish-box">
+            <img src="/images/dish.png">
+            <div class="name-price">
+              <p class="font16">酸汤双笋牛蛙</p>
+              <p class="font12 col999">月售0份</p>
+              <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
+
+              <div class="add-minus">
+                <span class="block">
+                  <i class="icon-x icon-x2"></i>
+                </span>
+                &nbsp;
+                <span class="font14 block">1</span>
+                &nbsp;
+                <span class="block">
+                  <i class="icon-x icon-x1"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+
       </ul>
+      <div class="dish-tip">图片仅供参考 菜品请以实物为准</div>
     </div>
 
   </div>

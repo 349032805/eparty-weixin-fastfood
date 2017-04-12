@@ -33,6 +33,18 @@ html{-webkit-tap-highlight-color: rgba(0,0,0,0)}
     vertical-align: middle;
 }
 
+.icon-x1:before {
+    content: "\e907";
+    font-size: 25px;
+    color: #11bbb4;
+}
+
+.icon-x2:before {
+    content: "\e908";
+    font-size:25px;
+    color:#a9a9a9;
+}
+
 .icon-x6:before {
     content: "\e90c";
 }
