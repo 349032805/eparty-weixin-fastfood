@@ -421,7 +421,7 @@
     padding: 12px;
 }
 
-.big-img-dialog img {
+.dish-big {
     width: 100%;
     height: 280px;
     display: block;
@@ -447,6 +447,15 @@
   clear: both;
   height: 30px;
   line-height: 30px;
+}
+
+.close-icon {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  right: -26px;
+  top: -26px;
+  z-index: 1010;
 }
 
 
@@ -834,8 +843,13 @@
 
 <!-- 弹出的菜品大图模态框 -->
 <div class="big-img-dialog" ng-show="showBig">
+  <div style="position: relative;">
+
+  <!-- 关闭按钮 -->
+  <img src="/images/close_icon.png" class="close-icon" ng-click="showBig = false">
+
   <p class="dialog-title font16">鱼香肉丝</p>
-  <img src="/images/dish_demo.jpg">
+  <img src="/images/dish_demo.jpg" class="dish-big">
   <ul>
     <li>大</li>
     <li>大</li>
@@ -858,6 +872,7 @@
             </span>
         </div>
     </div>
+  </div>
   </div>
 </div>
 
