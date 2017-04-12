@@ -187,22 +187,71 @@
 		height: 50px;
 		width: 100%;
 		background: white;
-		border-top: 1px solid #dedede;
 		position: fixed;
-		z-index: 1000;
+		z-index: 100;
 		left: 0;
 		bottom: 0;
 		padding: 0 10px;
 	}
-	.pay-btn {
-		height: 38px;
-		width: 145px;
-		border-radius: 4px;
-		background: #11bbb4;
-		color: white;
-		font-size: 16px;
-		vertical-align: middle;
-	}
+
+.weixin-pay:before{
+	content: " ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px solid #BCBAB6;
+	color: #BCBAB6;
+	-webkit-transform-origin:0 100%;
+	transform-origin:0 100%;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+
+.pay-btn {
+	height: 38px;
+	width: 145px;
+	border-radius: 4px;
+	background: #11bbb4;
+	color: white;
+	font-size: 16px;
+	vertical-align: middle;
+}
+
+ .clean-dish-dialog {
+ 	position: fixed;
+    width: 85%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: white;
+    text-align: center;
+    border-radius: 3px;
+    border-radius: 2px;
+    z-index: 1000;
+ }
+
+.dialog .dialog-content {
+  padding: 20px 40px 15px;
+}
+
+.dialog .opt-btn {
+  width: 100px;
+  height: 34px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: white;
+}
+
+.opt-block {
+	height: 40px;
+}
+
+.dialog-text {
+	font-size: 17px;
+	margin-bottom: 20px;
+}
 
 </style>
 
@@ -220,7 +269,7 @@
 			<div class="bottom-line">
 				<p class="float-left">已点菜品 (11份)</p>
 				<p class="float-right">
-					<i class="icon-x icon-x9"></i>&nbsp;清空
+					<i class="icon-x icon-x9"></i>&nbsp;<span style="vertical-align: middle;">清空</span>
 				</p>
 			</div>
 		</div>
@@ -321,5 +370,17 @@
 	 	</div>
 
 	 </div>
+
+
+	 <!-- 清除菜单模态框 -->
+	 <div class="clean-dish-dialog dialog">
+		<div class="dialog-content">
+			<p class="dialog-text">确定要清空购物车吗?</p>
+			<div class="opt-block">
+				<button type="button" class="opt-btn float-left cancel-btn" style="background-color: white;border:1px solid #11bbb4;color:#000">取消</button>
+				<button type="button" class="opt-btn float-right" style="background-color: #11bbb4;border:1px solid #11bbb4:">确定</button>
+			</div>
+		</div>
+	</div>
 	
 </div>
