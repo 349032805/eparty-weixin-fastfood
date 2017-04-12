@@ -108,7 +108,6 @@ gulp.task('serve',function (cb) {
   runSequence('clean:tmp',
     ['lint:scripts'],
     ['plugin'],
-    ['ngConfig'],
     ['start:client'],
     'watch', cb);
 });
@@ -127,21 +126,6 @@ gulp.task('bower', function () {
 
 gulp.task('plugin', function() {
   gulp.src('./bower_components/**').pipe(gulp.dest(yeoman.app + '/bower_components'));
-});
-
-var ENV = process.env.NODE_ENV || 'development';
-var config = require('./config.js');
-var makeJson = function(env, filePath) {
-  fs.writeFileSync(filePath,JSON.stringify(env));
-};
-
-gulp.task('ngConfig', function() {
-  makeJson(config[ENV], './config.json');
-  gulp.src('./config.json')
-    .pipe(ngConfig('ngEnvConfig', {
-      constants: config[ENV]
-    }))
-    .pipe(gulp.dest(yeoman.app + '/scripts/'))
 });
 
 ///////////
@@ -180,16 +164,11 @@ gulp.task('client:build', ['html', 'revCollectorCss'], function () {
     .pipe(gulp.dest(yeoman.dist));
 });
 
-// gulp.task('html', function () {
-//   return gulp.src(yeoman.app + '/views/**/*')
-//    // .pipe($.minifyHtml({conditionals: true, loose: false}))
-//     .pipe(gulp.dest(yeoman.dist + '/views'));
-// });
 
 gulp.task('html', function () {
   return gulp.src(['app/rev/**/*.json', yeoman.app + '/views/**/*'])
         .pipe(revCollector())
-   // .pipe($.minifyHtml({conditionals: true, loose: false}))
+   .pipe($.minifyHtml({conditionals: true, loose: false}))
     .pipe(gulp.dest(yeoman.dist + '/views'));
 });
 
@@ -217,7 +196,7 @@ gulp.task('copy:extras', function () {
 });
 
 gulp.task('copy:fonts', function () {
-  return gulp.src(yeoman.app + '/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/**/*')
+  return gulp.src(yeoman.app + '/fonts/**/*')
     .pipe(gulp.dest(yeoman.dist + '/fonts'));
 });
 
@@ -231,5 +210,5 @@ gulp.task('copy:plugins', function () {
 // });
 
 gulp.task('build', ['clean:dist'], function () {
-  runSequence(['ngConfig','revImg','copy:extras','copy:fonts', 'copy:plugins','client:build']);
+  runSequence(['revImg','copy:extras','copy:fonts', 'copy:plugins','client:build']);
 });

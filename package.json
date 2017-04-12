@@ -2,10 +2,9 @@
   "name": "eparty",
   "scripts": {
     "start": "gulp serve",
-    "build": "cross-env NODE_ENV=production gulp build"
+    "build": "gulp build"
   },
   "devDependencies": {
-    "cross-env": "^3.1.4",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "2.3.1",
     "gulp-cache": "^0.2.10",
