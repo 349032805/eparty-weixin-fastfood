@@ -164,6 +164,28 @@
   text-align: center;
   border-bottom: 1px dashed #e3dfd8;
   font-size: 14px;
+  position: relative;
+}
+
+.current-category {
+  color: #11bbb4;
+  background: white;
+  border-left: 3px solid #11bbb4;
+}
+
+.num-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ef592b;
+  line-height: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
 
@@ -172,6 +194,7 @@
   float: left;
   overflow-y: auto;
   background: white;
+  padding-bottom: 60px;
 }
 
 .category-title {
@@ -355,6 +378,7 @@
     z-index: 290;
     padding: 0 12px;
     width: 100%;
+    display: none;
   }
 
   .tablecode {
@@ -428,7 +452,7 @@
     <!-- 左侧分类 -->
     <div class="menu-category">
       <ul>
-        <li>经典私房菜</li>
+        <li class="current-category">经典私房菜<div class="num-circle">1</div></li>
         <li>农家风味</li>
         <li>开胃凉菜</li>
         <li>饮品</li>
@@ -455,7 +479,7 @@
         <li class="category-title">经典私房菜</li>
         <li class="dish-item">
           <div class="dish-box">
-            <img src="/images/dish_demo.jpg">
+            <img src="/images/dish_demo.jpg" ng-click="showBigImg()">
             <div class="name-price">
               <p class="font16">酸汤双笋牛蛙</p>
               <p class="font12 col999">月售0份</p>

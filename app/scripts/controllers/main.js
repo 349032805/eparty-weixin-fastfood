@@ -8,5 +8,10 @@ angular.module('eparty')
          $rootScope.hasShowed = true;
         }, 2000);
   	}
+
+  	//显示大图
+	$scope.showBigImg = function () {
+     alert(111);
+   }
     
   });
