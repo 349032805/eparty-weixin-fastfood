@@ -222,11 +222,24 @@
   bottom: 10px;
   z-index: 10;
   display: flex;
+  text-align: center;
 }
 
 .block {
   flex: 1;
   text-align: center;
+}
+
+.add {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.minus {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .select-attr-btn {
@@ -241,6 +254,64 @@
   bottom: 10px;
   z-index: 10;
 }
+
+.sellout {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+}
+
+.opt {
+    height: 50px;
+    width: 100%;
+    background: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 0 10px;
+  }
+
+  .next-step {
+    float: right;
+    padding: 5px 0;
+    height: 100%;
+  }
+
+  .next-step button {
+    height: 100%;
+    width: 120px;
+    background: #ccc;
+    font-size: 16px;
+    border-radius: 4px;
+    color: #f8f3f3;
+    letter-spacing: 2px;
+  }
+
+  .opt:before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #BCBAB6;
+    color: #BCBAB6;
+    -webkit-transform-origin:0 100%;
+    transform-origin:0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+
+  .cart-price {
+    float: left;
+    line-height: 50px;
+    padding-left: 70px;
+    color: #999;
+    font-size: 16px;
+  }
 
 /*菜单样式!!!*/
 
@@ -322,15 +393,17 @@
             </div>
 
              <div class="add-minus">
-                <span class="block">
-                  <i class="icon-x icon-x2"></i>
-                </span>
-                &nbsp;
-                <span class="font14 block">1</span>
-                &nbsp;
-                <span class="block">
-                  <i class="icon-x icon-x1"></i>
-                </span>
+                <div style="position: relative;width: 100%;">
+                  <span class="block add">
+                    <i class="icon-x icon-x2"></i>
+                  </span>
+                  &nbsp;
+                  <span class="font14 block num">12</span>
+                  &nbsp;
+                  <span class="block minus">
+                    <i class="icon-x icon-x1"></i>
+                  </span>
+                </div>
               </div>
 
           </div>
@@ -357,17 +430,7 @@
               <p class="font12 col999">月售0份</p>
               <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
 
-              <div class="add-minus">
-                <span class="block">
-                  <i class="icon-x icon-x2"></i>
-                </span>
-                &nbsp;
-                <span class="font14 block">1</span>
-                &nbsp;
-                <span class="block">
-                  <i class="icon-x icon-x1"></i>
-                </span>
-              </div>
+              <img src="/images/sellout.png" class="sellout">
             </div>
           </div>
         </li>
@@ -383,15 +446,17 @@
             </div>
 
              <div class="add-minus">
-                <span class="block">
-                  <i class="icon-x icon-x2"></i>
-                </span>
-                &nbsp;
-                <span class="font14 block">1</span>
-                &nbsp;
-                <span class="block">
-                  <i class="icon-x icon-x1"></i>
-                </span>
+                <div style="position: relative;width: 100%;">
+                  <span class="block add">
+                    <i class="icon-x icon-x2"></i>
+                  </span>
+                  &nbsp;
+                  <span class="font14 block num">12</span>
+                  &nbsp;
+                  <span class="block minus">
+                    <i class="icon-x icon-x1"></i>
+                  </span>
+                </div>
               </div>
 
           </div>
@@ -405,17 +470,21 @@
               <p class="font12 col999">月售0份</p>
               <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
 
-              <div class="add-minus">
-                <span class="block">
-                  <i class="icon-x icon-x2"></i>
-                </span>
-                &nbsp;
-                <span class="font14 block">1</span>
-                &nbsp;
-                <span class="block">
-                  <i class="icon-x icon-x1"></i>
-                </span>
+             <div class="add-minus">
+                <div style="position: relative;width: 100%;">
+                  <span class="block add">
+                    <i class="icon-x icon-x2"></i>
+                  </span>
+                  &nbsp;
+                  <span class="font14 block num">12</span>
+                  &nbsp;
+                  <span class="block minus">
+                    <i class="icon-x icon-x1"></i>
+                  </span>
+                </div>
               </div>
+
+
             </div>
           </div>
         </li>
@@ -429,16 +498,19 @@
               <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
 
               <div class="add-minus">
-                <span class="block">
-                  <i class="icon-x icon-x2"></i>
-                </span>
-                &nbsp;
-                <span class="font14 block">1</span>
-                &nbsp;
-                <span class="block">
-                  <i class="icon-x icon-x1"></i>
-                </span>
+                <div style="position: relative;width: 100%;">
+                  <span class="block add">
+                    <i class="icon-x icon-x2"></i>
+                  </span>
+                  &nbsp;
+                  <span class="font14 block num">12</span>
+                  &nbsp;
+                  <span class="block minus">
+                    <i class="icon-x icon-x1"></i>
+                  </span>
+                </div>
               </div>
+
             </div>
           </div>
         </li>
@@ -454,15 +526,17 @@
             </div>
 
              <div class="add-minus">
-                <span class="block">
-                  <i class="icon-x icon-x2"></i>
-                </span>
-                &nbsp;
-                <span class="font14 block">1</span>
-                &nbsp;
-                <span class="block">
-                  <i class="icon-x icon-x1"></i>
-                </span>
+                <div style="position: relative;width: 100%;">
+                  <span class="block add">
+                    <i class="icon-x icon-x2"></i>
+                  </span>
+                  &nbsp;
+                  <span class="font14 block num">12</span>
+                  &nbsp;
+                  <span class="block minus">
+                    <i class="icon-x icon-x1"></i>
+                  </span>
+                </div>
               </div>
 
           </div>
@@ -476,17 +550,20 @@
               <p class="font12 col999">月售0份</p>
               <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
 
-              <div class="add-minus">
-                <span class="block">
-                  <i class="icon-x icon-x2"></i>
-                </span>
-                &nbsp;
-                <span class="font14 block">1</span>
-                &nbsp;
-                <span class="block">
-                  <i class="icon-x icon-x1"></i>
-                </span>
+             <div class="add-minus">
+                <div style="position: relative;width: 100%;">
+                  <span class="block add">
+                    <i class="icon-x icon-x2"></i>
+                  </span>
+                  &nbsp;
+                  <span class="font14 block num">12</span>
+                  &nbsp;
+                  <span class="block minus">
+                    <i class="icon-x icon-x1"></i>
+                  </span>
+                </div>
               </div>
+
             </div>
           </div>
         </li>
@@ -500,16 +577,19 @@
               <p class="font14" style="color: #f96132;">¥ 29 <span class="font12 col999">/个</span></p>
 
               <div class="add-minus">
-                <span class="block">
-                  <i class="icon-x icon-x2"></i>
-                </span>
-                &nbsp;
-                <span class="font14 block">1</span>
-                &nbsp;
-                <span class="block">
-                  <i class="icon-x icon-x1"></i>
-                </span>
+                <div style="position: relative;width: 100%;">
+                  <span class="block add">
+                    <i class="icon-x icon-x2"></i>
+                  </span>
+                  &nbsp;
+                  <span class="font14 block num">12</span>
+                  &nbsp;
+                  <span class="block minus">
+                    <i class="icon-x icon-x1"></i>
+                  </span>
+                </div>
               </div>
+
             </div>
           </div>
         </li>
@@ -518,6 +598,15 @@
       <div class="dish-tip">图片仅供参考 菜品请以实物为准</div>
     </div>
 
+  </div>
+
+  <!-- 底部重选以及下一步 -->
+  <div class="opt">
+
+    <div class="cart-price">购物车空空如也</div>
+    <div class="next-step">
+      <button type="button">下一步</button>
+    </div>
   </div>
 
   <!-- 餐厅详情 -->
