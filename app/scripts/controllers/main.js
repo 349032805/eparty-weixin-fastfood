@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('eparty')
-  .controller('MainCtrl', function ($scope,$timeout,$rootScope) {
-    
+  .controller('MainCtrl', function ($scope,$timeout,$rootScope,$state) {
+
+    //开场动画
   	if(!$rootScope.hasShowed){
   	 	$timeout(function() {
          $rootScope.hasShowed = true;
@@ -14,8 +15,12 @@ angular.module('eparty')
        $scope.showBig = true;
     }
 
+    //下一步
+    $scope.nextStep = function () {
+       $state.go('orderConfirm');
+    }
 
-
+    //
 
     
   });
