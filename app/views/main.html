@@ -79,7 +79,6 @@
 
 .store-detail {
   margin-top: 15px;
-  display: none;
 }
 
 .store-logo {
@@ -483,14 +482,14 @@
     &nbsp;<span style="vertical-align: middle;">商家优惠活动 满100满10块</span>
   </div>
 
-  <div class="tab bottom-1px-line">
-    <div class="tab-title">
-        <span class="current-tab"><strong>菜单列表</strong></span>
-        <span class="current-line"></span>
+  <div class="tab bottom-1px-line" ng-init="tab = 'menu'">
+    <div class="tab-title" ng-click="tab='menu'">
+        <span ng-class="{'current-tab': tab == 'menu'}"><strong>菜单列表</strong></span>
+        <span ng-class="{'current-line': tab == 'menu'}"></span>
     </div>
-    <div class="tab-title">
-       <span><strong>餐厅详情</strong></span>
-      <span class="current-line"></span>
+    <div class="tab-title" ng-click="tab='intro'">
+       <span ng-class="{'current-tab': tab == 'intro'}"><strong>餐厅详情</strong></span>
+      <span ng-class="{'current-line': tab == 'intro'}"></span>
     </div>
   </div>
 </div>
@@ -498,7 +497,7 @@
 <div class="main">
 
   <!-- 菜单列表!!! -->
-  <div class="menu">
+  <div class="menu" ng-show="tab == 'menu'">
     <!-- 左侧分类 -->
     <div class="menu-category">
       <ul>
@@ -792,7 +791,7 @@
   </div>
 
   <!-- 底部重选以及下一步 -->
-  <div class="opt">
+  <div class="opt" ng-show="tab == 'menu'">
     <div class="opt-box">
       <div class="shop-cart">
         <i class="icon-x icon-x4"></i>
@@ -806,7 +805,7 @@
   </div>
 
   <!-- 餐厅详情 -->
-  <div class="store-detail">
+  <div class="store-detail" ng-show="tab == 'intro'">
     <div class="store-logo">
       <img src="/images/default_logo.png"> &nbsp;&nbsp;易趴科技
     </div>
