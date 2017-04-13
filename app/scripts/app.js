@@ -1,9 +1,7 @@
 'use strict';
 
 angular
-  .module('eparty', [
-    'ui.router'
-  ])
+  .module('eparty', ['ui.router','ngAnimate'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.when("", "/main");
      $stateProvider
@@ -45,6 +43,11 @@ angular
         .state("evaluate", {
             url: "/evaluate",
             templateUrl: "/views/evaluate.html"
+        })
+        .state("test", {
+            url: "/test",
+            templateUrl: "/views/test.html",
+            controller: 'TestCtrl'
         });
        
         $urlRouterProvider.otherwise("/main");

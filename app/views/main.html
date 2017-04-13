@@ -818,7 +818,7 @@
       <div class="shop-cart" ng-click="showBottomItem = !showBottomItem">
         <i class="icon-x icon-x4"></i>
       </div>
-      <div class="ball" ng-class="{'drop': isDrop}">
+      <div class="ball" ng-class="{'drop': ball.isShow}" ng-repeat="ball in balls">
         <div class="inner"></div>
       </div>
       <div class="total-count">10</div>
