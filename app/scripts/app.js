@@ -31,7 +31,8 @@ angular
         })
         .state("orderConfirm", {
             url: "/orderConfirm",
-            templateUrl: "/views/orderConfirm.html"
+            templateUrl: "/views/orderConfirm.html",
+            controller: 'OrderConfirmCtrl'
         })
         .state("myhome", {
             url: "/myhome",

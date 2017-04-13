@@ -255,13 +255,13 @@
 .add {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 }
 
 .minus {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
 }
 
 .select-attr-btn {
@@ -339,6 +339,21 @@
     width: 100%;
     height: 100%;
     position: relative;
+  }
+
+  .ball {
+    position: fixed;
+    left: 28px;
+    bottom: 28px;
+    z-index: 320;
+    display: none;
+  }
+
+  .inner {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
   }
 
   .shop-cart {
@@ -456,6 +471,14 @@
   z-index: 1010;
 }
 
+.drop {
+  transition: all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41);
+}
+
+.drop .inner {
+  transition: all 0.4s linear;
+}
+
 
 </style>
 
@@ -535,13 +558,13 @@
 
              <div class="add-minus">
                 <div style="position: relative;width: 100%;">
-                  <span class="block add">
+                  <span class="block minus">
                     <i class="icon-x icon-x2"></i>
                   </span>
                   &nbsp;
                   <span class="font14 block num"><strong>12</strong></span>
                   &nbsp;
-                  <span class="block minus">
+                  <span class="block add" ng-click="drop($event)">
                     <i class="icon-x icon-x1"></i>
                   </span>
                 </div>
@@ -588,13 +611,13 @@
 
              <div class="add-minus">
                 <div style="position: relative;width: 100%;">
-                  <span class="block add">
+                  <span class="block minus">
                     <i class="icon-x icon-x2"></i>
                   </span>
                   &nbsp;
                   <span class="font14 block num">12</span>
                   &nbsp;
-                  <span class="block minus">
+                  <span class="block add">
                     <i class="icon-x icon-x1"></i>
                   </span>
                 </div>
@@ -613,13 +636,13 @@
 
              <div class="add-minus">
                 <div style="position: relative;width: 100%;">
-                  <span class="block add">
+                  <span class="block minus">
                     <i class="icon-x icon-x2"></i>
                   </span>
                   &nbsp;
                   <span class="font14 block num">12</span>
                   &nbsp;
-                  <span class="block minus">
+                  <span class="block add">
                     <i class="icon-x icon-x1"></i>
                   </span>
                 </div>
@@ -640,13 +663,13 @@
 
               <div class="add-minus">
                 <div style="position: relative;width: 100%;">
-                  <span class="block add">
+                  <span class="block minus">
                     <i class="icon-x icon-x2"></i>
                   </span>
                   &nbsp;
                   <span class="font14 block num">12</span>
                   &nbsp;
-                  <span class="block minus">
+                  <span class="block add">
                     <i class="icon-x icon-x1"></i>
                   </span>
                 </div>
@@ -668,13 +691,13 @@
 
              <div class="add-minus">
                 <div style="position: relative;width: 100%;">
-                  <span class="block add">
+                  <span class="block minus">
                     <i class="icon-x icon-x2"></i>
                   </span>
                   &nbsp;
                   <span class="font14 block num">12</span>
                   &nbsp;
-                  <span class="block minus">
+                  <span class="block add">
                     <i class="icon-x icon-x1"></i>
                   </span>
                 </div>
@@ -693,13 +716,13 @@
 
              <div class="add-minus">
                 <div style="position: relative;width: 100%;">
-                  <span class="block add">
+                  <span class="block minus">
                     <i class="icon-x icon-x2"></i>
                   </span>
                   &nbsp;
                   <span class="font14 block num">12</span>
                   &nbsp;
-                  <span class="block minus">
+                  <span class="block add">
                     <i class="icon-x icon-x1"></i>
                   </span>
                 </div>
@@ -719,13 +742,13 @@
 
               <div class="add-minus">
                 <div style="position: relative;width: 100%;">
-                  <span class="block add">
+                  <span class="block minus">
                     <i class="icon-x icon-x2"></i>
                   </span>
                   &nbsp;
                   <span class="font14 block num">12</span>
                   &nbsp;
-                  <span class="block minus">
+                  <span class="block add">
                     <i class="icon-x icon-x1"></i>
                   </span>
                 </div>
@@ -754,13 +777,13 @@
       <li style="width: 25%;color: #f96132;" class="text-center font16"><strong>¥ 29</strong></li>
       <li style="width: 25%;">
          <div style="position: relative;display: flex;">
-            <span class="block add">
+            <span class="block minus">
               <i class="icon-x icon-x2"></i>
             </span>
             &nbsp;
             <span class="font14 block num"><strong>12</strong></span>
             &nbsp;
-            <span class="block minus">
+            <span class="block add">
               <i class="icon-x icon-x1"></i>
             </span>
           </div>
@@ -772,13 +795,13 @@
       <li style="width: 25%;color: #f96132;" class="text-center font16"><strong>¥ 29</strong></li>
       <li style="width: 25%;">
          <div style="position: relative;display: flex;">
-            <span class="block add">
+            <span class="block minus">
               <i class="icon-x icon-x2"></i>
             </span>
             &nbsp;
             <span class="font14 block num"><strong>12</strong></span>
             &nbsp;
-            <span class="block minus">
+            <span class="block add">
               <i class="icon-x icon-x1"></i>
             </span>
           </div>
@@ -793,6 +816,9 @@
     <div class="opt-box">
       <div class="shop-cart" ng-click="showBottomItem = !showBottomItem">
         <i class="icon-x icon-x4"></i>
+      </div>
+      <div class="ball" ng-class="{'drop': isDrop}">
+        <div class="inner"></div>
       </div>
       <div class="total-count">10</div>
       <div class="cart-price">购物车空空如也</div>

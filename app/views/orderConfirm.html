@@ -146,6 +146,16 @@
 		height: 26px;
 	}
 
+	.current-taste {
+		border-color: #11bbb4!important;
+		color: #00a9a2!important;
+	}
+
+	.current-hot {
+		border-color: #11bbb4!important;
+		color: #00a9a2!important;
+	}
+
 	.mt10{
 		margin-top: 10px;
 	}
@@ -268,7 +278,7 @@
 		<div class="total-clean">
 			<div class="bottom-line">
 				<p class="float-left">已点菜品 (11份)</p>
-				<p class="float-right">
+				<p class="float-right" ng-init="isClean = false" ng-click = "isClean = true">
 					<i class="icon-x icon-x9"></i>&nbsp;<span style="vertical-align: middle;">清空</span>
 				</p>
 			</div>
@@ -322,25 +332,25 @@
 		<div class="taste-options">
 			<ul>
 				<li class="group-select">
-					<span id="option1" class="group-option">不要辣</span>
-					<span id="option2" class="group-option">少放辣</span>
-					<span id="option3" class="group-option">多放辣</span>
-					<span class="vertical-line" id="line1"></span>
+					<span id="option1" class="group-option" ng-click="selectHot('nohot')" ng-class="{'current-hot': hot == 'nohot'}">不要辣</span>
+					<span id="option2" class="group-option" ng-click="selectHot('littleHot')" ng-class="{'current-hot': hot == 'littleHot'}">少放辣</span>
+					<span id="option3" class="group-option" ng-click="selectHot('moreHot')" ng-class="{'current-hot': hot == 'moreHot'}">多放辣</span>
+					<span class="vertical-line" id="line1" ng-class="{'current-hot': hot == 'nohot' || hot == 'littleHot'}"></span>
 					<span class="vertical-line" id="line2"></span>
 				</li>
-				<li style="margin-right: 0;"><button type="button">少放酱油</button></li>
+				<li style="margin-right: 0;"><button type="button" ng-click="selectTaste('soySauce')" ng-class="{'current-taste': isSoySauce}">少放酱油</button></li>
 			</ul>
 
 			<ul class="clearfix mt10">
-				<li><button type="button">少放盐</button></li>
-				<li><button type="button">多点醋</button></li>
-				<li><button type="button">不要香菜</button></li>
-				<li><button type="button">不要洋葱</button></li>
+				<li><button type="button" ng-click="selectTaste('salt')" ng-class="{'current-taste': isSalt}">少放盐</button></li>
+				<li><button type="button" ng-click="selectTaste('vinegar')" ng-class="{'current-taste': isVinegar}">多点醋</button></li>
+				<li><button type="button" ng-click="selectTaste('coriander')" ng-class="{'current-taste': isCoriander}">不要香菜</button></li>
+				<li><button type="button" ng-click="selectTaste('onion')" ng-class="{'current-taste': isOnion}">不要洋葱</button></li>
 			</ul>
 		</div>
 
 		<div class="other-demand">
-			<input type="text" placeholder="其他偏好或要求" class="custom-input">
+			<input type="text" placeholder="其他偏好或要求" class="custom-input" maxlength="50">
 		</div>
 
 	</div>
@@ -355,8 +365,8 @@
 
 	<!-- 填写发票信息 -->
 	<div class="invoice-write">
-		<input type="text" placeholder="请输入发票信息" class="custom-input">
-		<input type="text" placeholder="请输入邮箱" class="custom-input mt10">
+		<input type="text" placeholder="请输入发票信息" class="custom-input" maxlength="30">
+		<input type="text" placeholder="请输入邮箱" class="custom-input mt10" maxlength="50">
 	</div>
 
 	 <!-- 微信支付 -->
@@ -373,14 +383,16 @@
 
 
 	 <!-- 清除菜单模态框 -->
-	 <div class="clean-dish-dialog dialog">
+	 <div class="clean-dish-dialog dialog" ng-show="isClean">
 		<div class="dialog-content">
 			<p class="dialog-text">确定要清空购物车吗?</p>
 			<div class="opt-block">
-				<button type="button" class="opt-btn float-left cancel-btn" style="background-color: white;border:1px solid #11bbb4;color:#000">取消</button>
-				<button type="button" class="opt-btn float-right" style="background-color: #11bbb4;border:1px solid #11bbb4:">确定</button>
+				<button type="button" class="opt-btn float-left cancel-btn" style="background-color: white;border:1px solid #11bbb4;color:#000" ng-click="isClean = false">取消</button>
+				<button type="button" class="opt-btn float-right" style="background-color: #11bbb4;border:1px solid #11bbb4:" ng-click="cleanShopCart()">确定</button>
 			</div>
 		</div>
 	</div>
+
+	<div class="global-mask-200" ng-show = "isClean" ng-click = "isClean = false"></div>
 	
 </div>
