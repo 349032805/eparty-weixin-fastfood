@@ -2,8 +2,7 @@
 
 angular.module('eparty')
   .controller('MainCtrl', function ($scope,$timeout,$rootScope) {
-  	$scope.showBig = false;
-
+    
   	if(!$rootScope.hasShowed){
   	 	$timeout(function() {
          $rootScope.hasShowed = true;
@@ -15,7 +14,7 @@ angular.module('eparty')
        $scope.showBig = true;
     }
 
-    
+
 
 
     

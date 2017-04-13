@@ -377,7 +377,6 @@
     z-index: 290;
     padding: 0 12px;
     width: 100%;
-    display: none;
   }
 
   .tablecode {
@@ -744,7 +743,7 @@
   </div>
 
   <!-- 底部菜单列表 -->
-  <div class="bottom-list">
+  <div class="bottom-list" ng-show="showBottomItem" ng-init="showBottomItem = false">
     <div class="tablecode">
       <p class="float-left">桌号: <span></span></p>
       <p class="float-right">
@@ -793,7 +792,7 @@
   <!-- 底部重选以及下一步 -->
   <div class="opt" ng-show="tab == 'menu'">
     <div class="opt-box">
-      <div class="shop-cart">
+      <div class="shop-cart" ng-click="showBottomItem = !showBottomItem">
         <i class="icon-x icon-x4"></i>
       </div>
       <div class="total-count">10</div>
@@ -837,11 +836,11 @@
 </div>
 
 <!--  遮罩层 -->
-<div class="global-mask-200"></div>
-<div class="global-mask-400" ng-show="showBig" ng-click="showBig = false"></div>
+<div class="global-mask-200" ng-show = "showBottomItem" ng-click="showBottomItem = !showBottomItem"></div>
+<div class="global-mask-400" ng-show = "showBig" ng-click = "showBig = false"></div>
 
 <!-- 弹出的菜品大图模态框 -->
-<div class="big-img-dialog" ng-show="showBig">
+<div class="big-img-dialog" ng-show="showBig" ng-init="showBig = false">
   <div style="position: relative;">
 
   <!-- 关闭按钮 -->
