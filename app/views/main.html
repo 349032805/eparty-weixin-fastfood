@@ -499,24 +499,23 @@
   <div class="menu" ng-show="tab == 'menu'">
     <!-- 左侧分类 -->
     <div class="menu-category">
-      <ul>
-        <li class="current-category">经典私房菜<div class="num-circle">1</div></li>
-        <li>农家风味</li>
-        <li>开胃凉菜</li>
-        <li>饮品</li>
-        <li>生煎</li>
-        <li>汤</li>
-        <li>主食</li>
-        <li>招牌菜</li>
-         <li>经典私房菜</li>
-        <li>农家风味</li>
-        <li>开胃凉菜</li>
-        <li>饮品</li>
-        <li>生煎</li>
-        <li>汤</li>
-        <li>主食</li>
-        <li>招牌菜</li>
-
+      <ul ng-init="category='a'">
+        <li ng-class="{'current-category': category == 'a'}" ng-click="category = 'a'">经典私房菜<div class="num-circle">1</div></li>
+        <li ng-class="{'current-category': category == 'z'}" ng-click="category = 'z'">农家风味</li>
+        <li ng-class="{'current-category': category == 'b'}" ng-click="category = 'b'">开胃凉菜</li>
+        <li ng-class="{'current-category': category == 'c'}" ng-click="category = 'c'">饮品</li>
+        <li ng-class="{'current-category': category == 'd'}" ng-click="category = 'd'">生煎</li>
+        <li ng-class="{'current-category': category == 'e'}" ng-click="category = 'e'">汤</li>
+        <li ng-class="{'current-category': category == 'f'}" ng-click="category = 'f'">主食</li>
+        <li ng-class="{'current-category': category == 'g'}" ng-click="category = 'g'">招牌菜</li>
+        <li ng-class="{'current-category': category == 'h'}" ng-click="category = 'h'">经典私房菜</li>
+        <li ng-class="{'current-category': category == 'i'}" ng-click="category = 'i'">农家风味</li>
+        <li ng-class="{'current-category': category == 'j'}" ng-click="category = 'j'">开胃凉菜</li>
+        <li ng-class="{'current-category': category == 'k'}" ng-click="category = 'k'">饮品</li>
+        <li ng-class="{'current-category': category == 'l'}" ng-click="category = 'l'">生煎</li>
+        <li ng-class="{'current-category': category == 'm'}" ng-click="category = 'm'">汤</li>
+        <li ng-class="{'current-category': category == 'n'}" ng-click="category = 'n'">主食</li>
+        <li ng-class="{'current-category': category == 'o'}" ng-click="category = 'o'">招牌菜</li>
 
       </ul>
     </div>
