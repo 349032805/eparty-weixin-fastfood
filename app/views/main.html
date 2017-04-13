@@ -345,7 +345,6 @@
     position: fixed;
     left: 28px;
     bottom: 28px;
-    z-index: 320;
     display: none;
   }
 
@@ -355,6 +354,14 @@
     border-radius: 50%;
     background: red;
   }
+
+.drop {
+  transition: all 0.5s cubic-bezier(0.49, -0.29, 0.75, 0.41);
+}
+
+.drop .inner {
+  transition: all 0.5s linear;
+}
 
   .shop-cart {
     position: absolute;
@@ -372,7 +379,7 @@
   .total-count {
     position: absolute;
     bottom: 44px;
-    left: 46px;
+    left: 36px;
     z-index: 320;
     width: 20px;
     height: 20px;
@@ -471,13 +478,7 @@
   z-index: 1010;
 }
 
-.drop {
-  transition: all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41);
-}
 
-.drop .inner {
-  transition: all 0.4s linear;
-}
 
 
 </style>
